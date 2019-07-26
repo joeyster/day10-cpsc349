@@ -33,7 +33,12 @@ buttons.forEach(function(button) {
 
     fetch(`http://jsonplaceholder.typicode.com/comments?postId=${button.value}`)
         .then(response => response.json())
-        .then(json => console.log(json));
+        .then(json =>  {
+      console.log(json);
+      json.forEach(function(comment) {
+
+      })
+    }
 
     event.preventDefault();
   });
